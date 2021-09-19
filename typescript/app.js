@@ -1,18 +1,28 @@
 "use strict";
 (function () {
     /**
-     * Funcones: parametros Obligatorios, Opcionales y PorDefecto.
-     * Se debe segir ese orden de definicion de parametros en las funciones
-     *
+     * Funciones flecha
      */
-    function activar(obligatorio, opcional, porDefecto) {
-        if (porDefecto === void 0) { porDefecto = 'Batisenal'; }
-        if (opcional) {
-            console.log(" \n                " + obligatorio + " activo en la " + opcional + " la " + porDefecto);
+    var miFuncion = function miFunion(a) {
+        return a;
+    };
+    var miFuncionF = function (a) {
+        return a;
+    };
+    var hulk = {
+        nombre: 'hulk',
+        smash: function () {
+            var _this = this;
+            /**
+             * La funcion flecha permite hacer uso del objeto this dentro de otro scope, lo que no seria posible
+             * usando unicamente js.
+             */
+            // setTimeout( function () {
+            setTimeout(function () {
+                console.log(" " + _this.nombre + " smashh ");
+            }, 1000);
         }
-        else {
-            console.log(" \n                " + obligatorio + " activo la " + porDefecto + " ");
-        }
-    }
-    activar('Gordon', '', 'Batisenal');
+    };
+    console.log(hulk.smash());
+    console.log(miFuncionF('arrow function'));
 }());
