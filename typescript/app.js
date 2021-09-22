@@ -1,36 +1,25 @@
 "use strict";
 (() => {
     /**
-     *  Clases
-     * Definicion; con palabra reservada 'class'
+     *
+     * Tipado de retorno de la funcion, es decir definir que tipo dato debe retornar una funcion.
+     * TypeScript en algunas funciones puede inferir el tipo de dato de retorno como en los dos
+     * primeros ejemplos a continuacion
      */
-    class Advenger {
-        // inicializando propiedades en el constructor
-        constructor(nombre, habilidad, edad) {
-            this.nombre = nombre;
-            this.habilidad = habilidad;
-            this.edad = edad;
-        }
-        // Metodos
-        poder() {
-            return 'es mi poder';
-        }
-    }
-    const atman = new Advenger('atman', 'encogerce', 30);
-    // Definicion e inicializacion de una clase en forma corta.
-    class ligaJusticia {
-        constructor(superHeroe, nombre, poder, usaCapa) {
-            this.superHeroe = superHeroe;
-            this.nombre = nombre;
-            this.poder = poder;
-            this.usaCapa = usaCapa;
-            this.superHeroe = superHeroe;
-            this.nombre = nombre;
-            this.poder = poder;
-            this.usaCapa = usaCapa;
-        }
-    }
-    const superMan = new ligaJusticia('SuperMan', 'Clarc kent', 'Sentido y habilidades super desarrolladas', true);
-    console.log(atman);
-    console.warn(superMan);
+    const suma = (a, b) => a + b;
+    const nombre = () => 'hola soy Jorge';
+    /**
+     *
+     * Para los casos que no puede inferir el tipo de retorno.
+     *
+     */
+    const saldo = () => {
+        return new Promise((resolve, reject) => {
+            resolve('Promesa resuelta');
+            reject('No se pude devolver lo prometido');
+        });
+    };
+    console.log(suma(1, 3));
+    console.log(nombre());
+    console.log(saldo());
 })();
