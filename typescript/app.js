@@ -1,31 +1,36 @@
 "use strict";
 (() => {
     /**
-     * Definiendo un objeto Xmen de tipo XMEN.
+     *  Clases
+     * Definicion; con palabra reservada 'class'
      */
-    const xmen = {
-        nombre: 'Wolverine',
-        edad: 60,
-        poder: 'garras',
-        lanzarPoder() {
-            return `mostrar ${this.poder}`;
+    class Advenger {
+        // inicializando propiedades en el constructor
+        constructor(nombre, habilidad, edad) {
+            this.nombre = nombre;
+            this.habilidad = habilidad;
+            this.edad = edad;
         }
-    };
-    const xmen1 = {
-        nombre: 'ciclope',
-        edad: 21,
-        poder: 'lazer',
-        lanzarPoder() {
-            return `${this.poder} por los hojos`;
+        // Metodos
+        poder() {
+            return 'es mi poder';
         }
-    };
-    const enviarMision = (nombre) => {
-        console.log(`Enviar ${nombre} a la mision`);
-    };
-    const volverAlCuartel = (nombre) => {
-        console.log(`${nombre} debe volver al cuartel `);
-    };
-    enviarMision(xmen.nombre);
-    enviarMision(xmen1.lanzarPoder());
-    volverAlCuartel(xmen.nombre);
+    }
+    const atman = new Advenger('atman', 'encogerce', 30);
+    // Definicion e inicializacion de una clase en forma corta.
+    class ligaJusticia {
+        constructor(superHeroe, nombre, poder, usaCapa) {
+            this.superHeroe = superHeroe;
+            this.nombre = nombre;
+            this.poder = poder;
+            this.usaCapa = usaCapa;
+            this.superHeroe = superHeroe;
+            this.nombre = nombre;
+            this.poder = poder;
+            this.usaCapa = usaCapa;
+        }
+    }
+    const superMan = new ligaJusticia('SuperMan', 'Clarc kent', 'Sentido y habilidades super desarrolladas', true);
+    console.log(atman);
+    console.warn(superMan);
 })();

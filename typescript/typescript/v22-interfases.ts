@@ -2,7 +2,7 @@
     /**
      * Defino una interfaz
      *     La interfaz permite crear un tipo de dato personalizado, el que puede contener 
-     * tipos de datos y declaracion de funciones.
+     * tipos de datos y declaracion de metodos (funciones()).
      *     Es util para evitar errores.
      *     Al crear objetos que heredan de la interfaz, me facilita a la hora de editar los hijos 
      * creados, realizando los cambios en la interfaz, evitando tocar todos los hijos.
